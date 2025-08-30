@@ -1,0 +1,36 @@
+{
+  "name": "tasksphere-root",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "serve": "npm --workspace web run start",
+    "build": "npm --workspace web run build",
+    "test": "npm --workspace web run test",
+    "e2e": "npm --workspace web run cypress:run",
+    "lint": "npm --workspace web run lint || echo 'lint script to be added'",
+    "prestart": "node scripts/generate-config.cjs",
+    "prebuild": "node scripts/generate-config.cjs"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,scss,html,md}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
+
+
