@@ -15,11 +15,11 @@
     "prebuild": "node scripts/generate-config.cjs"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "dotenv": "^16.4.5",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1"
+    "lint-staged": "^16.1.5"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,scss,html,md}": [
@@ -30,7 +30,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@sentry/browser": "^10.8.0"
   }
 }
-
-
