@@ -1,0 +1,6 @@
+project_id = "tasksphere"
+
+[functions]
+verify_jwt = true
+
+
